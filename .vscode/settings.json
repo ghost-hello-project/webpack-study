@@ -1,0 +1,83 @@
+{
+    // 隐藏某些文件
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        // "**/build": true,
+        "**/third": true
+    },
+    // 保存时自动格式化
+    "editor.formatOnSave": true,
+    "prettier.configPath": ".prettierrc.json",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 修改了注释的颜色
+    "editor.tokenColorCustomizations": {
+        "comments": {
+            "foreground": "#4a524e",
+            "fontStyle": ""
+        }
+    },
+    // 右侧标尺
+    "editor.rulers": [120],
+    // 关闭形参显示
+    "editor.inlayHints.enabled": "off",
+    // todo 配置
+    "todo-tree.filtering.excludeGlobs": ["**/src/libs/**"],
+    "todo-tree.filtering.includeGlobs": ["**/src/**"],
+    "todo-tree.filtering.ignoreGitSubmodules": true,
+    "todohighlight.keywords": [],
+    "todo-tree.tree.showCountsInTree": true,
+    "todohighlight.keywordsPattern": "TODO:|FIXME:|NOTE:|\\(([^)]+)\\)",
+    "todohighlight.defaultStyle": {},
+    "todohighlight.isEnable": false,
+    "todo-tree.highlights.customHighlight": {
+        "BUG": {
+            "icon": "bug",
+            "foreground": "#F56C6C",
+            "type": "line"
+        },
+        "FIXME": {
+            "icon": "flame",
+            "foreground": "#FF9800",
+            "type": "line"
+        },
+        "TODO": {
+            "foreground": "#409EFF",
+            "type": "line"
+        },
+        "NOTE": {
+            "icon": "note",
+            "foreground": "#67C23A",
+            "type": "line"
+        },
+        "INFO": {
+            "icon": "info",
+            "foreground": "#909399",
+            "type": "line"
+        },
+        "TAG": {
+            "icon": "tag",
+            "foreground": "#409EFF",
+            "type": "line"
+        },
+        "HACK": {
+            "icon": "versions",
+            "foreground": "#E040FB",
+            "type": "line"
+        },
+        "XXX": {
+            "icon": "unverified",
+            "foreground": "#E91E63",
+            "type": "line"
+        }
+    },
+    "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "INFO", "NOTE", "TAG", "XXX"],
+    "todo-tree.general.statusBar": "total"
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../libs/layui-2.9.16/css/layui.css" />
+        <link rel="stylesheet" href="../libs/prismjs/prism-theme-default.css" />
+        <link rel="stylesheet" href="../libs/fontawesome-free-5.15.4-web/css/all.min.css" />
+        <title>article</title>
+    </head>
+    <body>
+        <div class="layui-row">
+            <div class="layui-col-md8 layui-col-md-offset2">
+                <div class="layui-row">
+                    <div class="layui-col-md3 site-container">
+                        <div class="site-userinfo-container">
+                            <div class="avatar-box">
+                                <a href="javascript:void(0);">
+                                    <img src="/images/avatar.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="site-meta">
+                                <a href="javascript:void(0);">ghost book</a>
+                                <p>这里是副标题</p>
+                            </div>
+                            <div class="site-count">
+                                <div class="count-item">
+                                    <span class="layui-badge layui-bg-cyan">文章</span
+                                    ><span class="layui-badge layui-bg-blue">23</span>
+                                </div>
+                                <div class="count-item">
+                                    <span class="layui-badge layui-bg-cyan">标签</span
+                                    ><span class="layui-badge layui-bg-blue">23</span>
+                                </div>
+                                <div class="count-item">
+                                    <span class="layui-badge layui-bg-cyan">分类</span
+                                    ><span class="layui-badge layui-bg-blue">23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-container"></div>
+                    </div>
+                    <div class="layui-col-md9 post">
+                        <div class="title">
+                            <h1>这里是标题</h1>
+                        </div>
+                        <div class="time">
+                            <i class="layui-icon layui-icon-table"></i>
+                            <span>2024-9-18 03:55:28</span>
+                            <span class="split">|</span>
+                            <i class="layui-icon layui-icon-align-center"></i>
+                            <a class="link" href="javascript:void(0);">分类一</a>
+                            &gt;
+                            <a class="link" href="javascript:void(0);">分类一</a>
+                            &gt;
+                            <a class="link" href="javascript:void(0);">分类一</a>
+                            <span class="split">|</span>
+                            <i class="layui-icon layui-icon-note"></i>
+                            <a class="link" href="javascript:void(0);">标签一</a>
+                            &gt;
+                            <a class="link" href="javascript:void(0);">标签二</a>
+                            &gt;
+                            <a class="link" href="javascript:void(0);">标签三</a>
+                        </div>
+                        <div class="post-content">
+                            <h1>一级标题</h1>
+                            <p>这是一段文字</p>
+                            <p>这是另一段一段文字</p>
+                            <h2>二级标题</h2>
+                            <h3>三级标题</h3>
+                            <h4>四级标记</h4>
+                            <h5>五级标题</h5>
+                            <h6>六级标题</h6>
+
+                            <a href="javascript:void(0);">这是一个链接</a>
+
+                            <h1>代码块</h1>
+                            <!-- 行内代码 -->
+                            <code class="language-css">p { color: red }</code>
+                            <!-- 行号与高亮行 -->
+                            <pre class="line-numbers" data-line="3,5-15">
+<!-- 设置语言 -->
+<code class="language-java">package com.laolang.graver.util;
+
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public class CharUtil {
+    public static final char zero_char = '\0';
+    public static final char brace_left_char = '{';
+    public static final String brace_left_literal = "{";
+    public static final char brace_right_char = '}';
+    public static final String brace_right_literal = "}";
+    public static final char parentheses_left_char = '(';
+    public static final String parentheses_left_literal = "(";
+    public static final char parentheses_right_char = ')';
+    public static final String parentheses_right_literal = ")";
+    public static final char semi = ';';
+    public static final String semi_literal = ";";
+
+
+    public static boolean isLowerLetter(char ch) {
+        return cn.hutool.core.util.CharUtil.isLetterLower(ch);
+    }
+
+    public static boolean isUpperLetter(char ch) {
+        return cn.hutool.core.util.CharUtil.isLetterUpper(ch);
+    }
+
+    public static boolean isDigit(char ch) {
+        return Character.isDigit(ch);
+    }
+
+    public static boolean isWordChar(char ch) {
+        return isLowerLetter(ch) || isUpperLetter(ch) || isDigit(ch) || '_' == ch;
+    }
+
+    public static boolean isWhitespace(char ch) {
+        return Character.isWhitespace(ch);
+    }
+}
+</code>
+            </pre>
+                            <h2>普通代码块</h2>
+
+                            <h2>代码块 tab</h2>
+                            <div class="layui-tab layui-tab-card">
+                                <ul class="layui-tab-title">
+                                    <li class="layui-this">代码一</li>
+                                    <li>代码二</li>
+                                </ul>
+                                <div class="layui-tab-content">
+                                    <div class="layui-tab-item layui-show">
+                                        <!-- 行号与高亮行 -->
+                                        <pre class="line-numbers" data-line="3,5-15">
+<!-- 设置语言 -->
+<code class="language-java">package com.laolang.graver.util;
+
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public class CharUtil {
+    public static final char zero_char = '\0';
+    public static final char brace_left_char = '{';
+    public static final String brace_left_literal = "{";
+    public static final char brace_right_char = '}';
+    public static final String brace_right_literal = "}";
+    public static final char parentheses_left_char = '(';
+    public static final String parentheses_left_literal = "(";
+    public static final char parentheses_right_char = ')';
+    public static final String parentheses_right_literal = ")";
+    public static final char semi = ';';
+    public static final String semi_literal = ";";
+
+
+    public static boolean isLowerLetter(char ch) {
+        return cn.hutool.core.util.CharUtil.isLetterLower(ch);
+    }
+
+    public static boolean isUpperLetter(char ch) {
+        return cn.hutool.core.util.CharUtil.isLetterUpper(ch);
+    }
+
+    public static boolean isDigit(char ch) {
+        return Character.isDigit(ch);
+    }
+
+    public static boolean isWordChar(char ch) {
+        return isLowerLetter(ch) || isUpperLetter(ch) || isDigit(ch) || '_' == ch;
+    }
+
+    public static boolean isWhitespace(char ch) {
+        return Character.isWhitespace(ch);
+    }
+}
+</code>
+                                            </pre>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <!-- 行号与高亮行 -->
+                                        <pre class="line-numbers" data-line="3,5-15">
+<!-- 设置语言 -->
+<code class="language-java">package com.laolang.graver.util;
+
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public class CharUtil {
+    public static final char zero_char = '\0';
+    public static final char brace_left_char = '{';
+    public static final String brace_left_literal = "{";
+    public static final char brace_right_char = '}';
+    public static final String brace_right_literal = "}";
+    public static final char parentheses_left_char = '(';
+    public static final String parentheses_left_literal = "(";
+    public static final char parentheses_right_char = ')';
+    public static final String parentheses_right_literal = ")";
+    public static final char semi = ';';
+    public static final String semi_literal = ";";
+
+
+    public static boolean isLowerLetter(char ch) {
+        return cn.hutool.core.util.CharUtil.isLetterLower(ch);
+    }
+
+    public static boolean isUpperLetter(char ch) {
+        return cn.hutool.core.util.CharUtil.isLetterUpper(ch);
+    }
+
+    public static boolean isDigit(char ch) {
+        return Character.isDigit(ch);
+    }
+
+    public static boolean isWordChar(char ch) {
+        return isLowerLetter(ch) || isUpperLetter(ch) || isDigit(ch) || '_' == ch;
+    }
+
+    public static boolean isWhitespace(char ch) {
+        return Character.isWhitespace(ch);
+    }
+}
+</code>
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h1>note</h1>
+                            <div class="post-note default">
+                                <div class="post-note-title">
+                                    <i class="fa fa-arrow-circle-right"></i>
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">default 这是一个提示标签</div>
+                            </div>
+                            <div class="post-note primary">
+                                <div class="post-note-title">
+                                    <i class="fa fa-plus-circle"></i>
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">primary 这是一个提示标签</div>
+                            </div>
+                            <div class="post-note success">
+                                <div class="post-note-title">
+                                    <i class="fa fa-check-circle"></i>
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">success 这是一个提示标签</div>
+                            </div>
+                            <div class="post-note info">
+                                <div class="post-note-title">
+                                    <i class="fa fa-info-circle"></i>
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">info 这是一个提示标签</div>
+                            </div>
+                            <div class="post-note warning">
+                                <div class="post-note-title">
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">warning 这是一个提示标签</div>
+                            </div>
+                            <div class="post-note danger">
+                                <div class="post-note-title">
+                                    <i class="fa fa-minus-circle"></i>
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">danger 这是一个提示标签</div>
+                            </div>
+
+                            <div class="post-note info">
+                                <div class="post-note-title">
+                                    <span>提示</span>
+                                </div>
+                                <div class="post-note-content">info 这是一个提示标签</div>
+                            </div>
+
+                            <h1>label</h1>
+                            <p>
+                                臣亮言：<span class="label">先帝</span>创业未半，而<span
+                                    class="label blue"
+                                    >中道崩殂</span
+                                >。今天下三分，<span class="label pink">益州疲敝</span>，此诚危<span
+                                    class="label red"
+                                    >急存亡之秋</span
+                                >也！然侍卫之臣，不懈于内；<span class="label purple">忠志之士</span
+                                >，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。
+                            </p>
+                            <p>
+                                宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<span
+                                    class="label orange"
+                                    >作奸</span
+                                >、<span class="label green">犯科</span
+                                >，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。
+                            </p>
+                            <h1>段落</h1>
+                            <h1>引用</h1>
+                            <div class="post-quote"><p>这是一个引用</p></div>
+                            <h1>字体样式</h1>
+                            <h1>表格</h1>
+                            <h1>脚注</h1>
+                            <h1>列表</h1>
+                            <h1>分割线</h1>
+                            <h1>图片</h1>
+                            <h1>任务列表</h1>
+                            <h1>mermaid</h1>
+                            <h1>专栏</h1>
+                            <h1>import</h1>
+                            <h1>代码浏览</h1>
+                        </div>
+
+                        <hr class="bottom-line" />
+                        <hr class="bottom-line" />
+
+                        <div class="copyright-wrapper">
+                            <div class="item">
+                                <span class="title">文章作者</span>
+                                <a href="javascript:void(0);">潼关路边的一只野鬼</a>
+                            </div>
+                            <div class="item">
+                                <span class="title">文章链接</span>
+                                <a href="javascript:void(0);"
+                                    >https://laolang2016.github.io/2024/09/12/java-micro-project/</a
+                                >
+                            </div>
+                            <div class="item">
+                                <span class="title">版权声明</span>
+                                本博客所有文章出特别声明外，均采用<a href="javascript:void(0);"
+                                    >CC BY-NC-SA 4.0</a
+                                >许可协议。转载请注明来自<a href="javascript:void(0);">野鬼圣经</a>
+                            </div>
+                            <span class="copyright-icon">&copy;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md12 footer">
+                <div class="footer-wrapper">
+                    <div class="copyright">©2016 - 2024 By 潼关路边的一只野鬼</div>
+                </div>
+            </div>
+        </div>
+        <script src="../libs/jquery/jquery-2.2.4.min.js"></script>
+        <script src="../libs/layui-2.9.16/layui.js"></script>
+        <script src="../libs/prismjs/prism.js"></script>
+    </body>
+</html>
